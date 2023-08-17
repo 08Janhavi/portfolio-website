@@ -1,0 +1,141 @@
+header{
+    height: 100vh;
+    padding-top:7rem;
+    overflow-x: hidden; 
+    overflow-y: auto;  
+}
+
+.header__container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+/*========================CTA================*/
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap:1.2rem;
+    justify-content: center;
+}
+
+/*========================HEADER SOCIALS================*/
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials a{
+    background: transparent ;
+    color: var(--color-bg) ;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid var(--color-bg);
+}
+
+.header__socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary);
+}
+
+.header__socials a:hover{
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+/*========================ME================*/
+
+.me{
+    background: linear-gradient(var(--color-white),transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 14rem 14rem 0 0;
+    overflow: hidden;
+    padding: 5.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/*========================SCROLL DOWN================*/
+.scroll__down{
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+    background: transparent ;
+    color: var(--color-bg) ;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid var(--color-bg);
+}
+
+.scroll__down:hover{
+    background: var(--color-bg);
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+/*==================MEDIA QUERIES(MEDIUM DEVICES)======================*/
+
+@media screen and (max-width:1024px){
+    header{
+        height: 80vh;
+        padding-top: 11rem;
+    }
+
+    .cta{
+        margin-top: 5rem;
+    }
+
+    .me {
+        width: 18rem;
+        height: 17rem;
+        left: calc(50% - 9rem);
+        margin-top: 10rem;
+        border-radius: 12rem 12rem 0 0;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        background-size: cover;
+    }
+
+    
+}
+
+/*==================MEDIA QUERIES(SMALL DEVICES)======================*/
+
+@media screen and (max-width:600px){
+    header{
+        height: 80vh;
+        padding-top: 8rem;
+    }
+
+    .cta{
+        margin-top: 3rem;
+    }
+
+    .me {
+        width: 18rem;
+        height: 17rem;
+        left: calc(50% - 9rem);
+        margin-top: 10rem;
+        border-radius: 12rem 12rem 0 0;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        background-size: cover;
+    }
+
+    .header__socials,.scroll__down{
+        display: none;
+    }
+}
